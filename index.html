@@ -116,6 +116,7 @@ left: 81%;
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
       var footer = document.querySelector("#unity-fullscreen-button");
+      let exp_trigger = document.getElementById('trigger');
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -152,6 +153,7 @@ left: 81%;
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
           loadingWindow.style.display = "none";
+                    exp_trigger.checked = true;
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
